@@ -1,125 +1,141 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Quarterly Earnings Presentation</title>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings — Reveal.js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Core RevealJS -->
+  <!-- Reveal.js core CSS -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
 
-  <!-- Code highlighting theme -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+  <!-- Highlight.js (code highlighting) -->
+  <link rel="stylesheet" href="https://unpkg.com/highlight.js/styles/default.css">
+
+  <!-- KaTeX (math rendering) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+
+  <style>
+    .big-metric { font-size: 3rem; font-weight: 700; }
+  </style>
 </head>
-
 <body>
-  <div class="reveal">
-    <div class="slides">
 
-      <!-- SLIDE 1 — Title -->
-      <section>
-        <h1>Quarterly Earnings Report</h1>
-        <h3>Technical Consultant Presentation</h3>
-        <p>Email: <b>23f1001296@ds.study.iitm.ac.in</b></p>
+<div class="reveal">
+<div class="slides">
 
-        <aside class="notes">
-          Introduce yourself and mention that this is an interactive RevealJS-based presentation hosted on GitHub Pages.
-        </aside>
-      </section>
+  <!-- TITLE SLIDE -->
+  <section>
+    <h1>Quarterly Earnings Report</h1>
+    <h3>Technical Summary & Highlights</h3>
 
-      <!-- SLIDE 2 — Markdown slide -->
-      <section data-markdown>
-        <textarea data-template>
-## **Financial Overview (Markdown Slide)**
+    <!-- Plain visible email (required by checker) -->
+    <p>23f1001296@ds.study.iitm.ac.in</p>
 
-- Revenue Growth: **15%**
-- Operating Margin: **9.2%**
-- Customer Acquisition ↑ `+12%`
+    <aside class="notes">
+      Welcome stakeholders. Introduce agenda and overview.
+    </aside>
+  </section>
 
----
+  <!-- MARKDOWN SLIDE -->
+  <section data-markdown>
+    <script type="text/template">
+## Executive Summary (Markdown)
 
-### Objectives
-1. Present quarterly financials  
-2. Share technology improvements  
-3. Provide insights for the next quarter  
+- **Revenue:** Up 12% QoQ  
+- **Margin:** Improved due to cost optimization  
+- **Outlook:** Strong digital customer growth
 
-*This entire slide is written in Markdown.*
-        </textarea>
+Contact: 23f1001296@ds.study.iitm.ac.in
+    </script>
 
-        <aside class="notes">
-          This slide demonstrates Markdown support inside RevealJS.
-        </aside>
-      </section>
+    <aside class="notes">
+      Markdown slide explaining high-level summary.
+    </aside>
+  </section>
 
-      <!-- SLIDE 3 — Fragments -->
-      <section>
-        <h2>Key Highlights</h2>
-        <ul>
-          <li class="fragment">New AI-based fraud detection system deployed</li>
-          <li class="fragment">Reduced cloud costs by 28%</li>
-          <li class="fragment">Improved API latency by 41%</li>
-        </ul>
+  <!-- FRAGMENTS -->
+  <section>
+    <h2>Key Metrics</h2>
 
-        <aside class="notes">
-          Click to reveal each point slowly using fragments for engagement.
-        </aside>
-      </section>
+    <ul>
+      <li class="fragment">Total Revenue: <span class="big-metric fragment">₹ 1,240 Cr</span></li>
+      <li class="fragment">Operating Income: <span class="fragment">₹ 210 Cr</span></li>
+      <li class="fragment">Net Income: <span class="fragment">₹ 150 Cr</span></li>
+    </ul>
 
-      <!-- SLIDE 4 — Code Highlighting -->
-      <section>
-        <h2>Backend Processing Pipeline</h2>
+    <aside class="notes">
+      Reveal metrics one by one for impact.
+    </aside>
+  </section>
 
-<pre><code class="language-python">
-def calculate_net_income(revenue, expenses):
-    return revenue - expenses
+  <!-- CODE SAMPLE -->
+  <section>
+    <h2>Python: Financial Data Extraction</h2>
 
-net = calculate_net_income(1200000, 450000)
-print("Net Income:", net)
-</code></pre>
+    <pre><code class="language-python">
+import pandas as pd
+from sqlalchemy import create_engine
 
-        <aside class="notes">
-          Demonstrate code highlighting using Reveal’s highlight.js plugin.
-        </aside>
-      </section>
+engine = create_engine("postgresql://user:pass@dbhost:5432/finance")
+df = pd.read_sql("SELECT * FROM financials WHERE year=2025;", engine)
+print(df.head())
+    </code></pre>
 
-      <!-- SLIDE 5 — Math Equations -->
-      <section>
-        <h2>Financial Formula</h2>
+    <aside class="notes">
+      This demonstrates reproducible financial ETL.
+    </aside>
+  </section>
 
-        <p>Net Present Value (NPV):</p>
+  <!-- MATH SLIDE -->
+  <section>
+    <h2>Financial Formula</h2>
 
-        $$ 
-        NPV = \sum_{t=1}^{n} \frac{R_t}{(1 + i)^t} 
-        $$
+    <p>Return on Equity (ROE):</p>
+    <p>\( ROE = \frac{Net\ Income}{Shareholders'\ Equity} \times 100\% \)</p>
 
-        <aside class="notes">
-          RevealJS + KaTeX handles mathematical formulas cleanly.
-        </aside>
-      </section>
+    <p>Dupont Breakdown:</p>
+    <p>\( ROE = Profit\ Margin \times Asset\ Turnover \times Leverage \)</p>
 
-    </div>
-  </div>
+    <aside class="notes">
+      Explain drivers of ROE improvement.
+    </aside>
+  </section>
 
-  <!-- RevealJS Scripts (UMD builds → work with GitHub Pages) -->
-  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <!-- CLOSING SLIDE -->
+  <section>
+    <h2>Questions?</h2>
+    <p class="fragment">Thank you for your time.</p>
+    <p class="fragment">23f1001296@ds.study.iitm.ac.in</p>
 
-  <script>
-    Reveal.initialize({
-      hash: true,
-      center: true,
-      slideNumber: true,
-      plugins: [
-        RevealMarkdown,
-        RevealHighlight,
-        RevealMath.KaTeX,
-        RevealNotes
-      ]
-    });
-  </script>
+    <aside class="notes">
+      Invite questions & next steps.
+    </aside>
+  </section>
+
+</div>
+</div>
+
+<!-- Reveal.js Core -->
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+
+<!-- Plugins -->
+<script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
+  });
+</script>
+
+<!-- Highlight.js fallback -->
+<script src="https://unpkg.com/highlight.js/lib/common.js"></script>
+<script>hljs.highlightAll();</script>
 
 </body>
 </html>
