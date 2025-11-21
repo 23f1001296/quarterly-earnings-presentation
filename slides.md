@@ -1,106 +1,82 @@
 ---
 marp: true
+theme: custom
 paginate: true
-theme: custom-theme
+headingDivider: 2
 class: lead
 ---
 
 <style>
 section {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 h1 {
-  color: #0a66c2;
+  color: #1a73e8;
 }
-footer {
-  font-size: 12px;
-  color: #666;
+p {
+  font-size: 1.1rem;
 }
 </style>
+
+<!--
+theme: custom
+-->
 
 <!-- Custom Theme -->
 <style>
 :root {
-  --background: #ffffff;
-  --foreground: #111111;
-  --accent: #0a66c2;
+  --color-background: #ffffff;
+  --color-foreground: #222222;
+  --color-accent: #1a73e8;
 }
 section {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+h1, h2 {
+  color: var(--color-accent);
 }
 </style>
 
-# Product Documentation Presentation
-### Author: Technical Writer — Software Division
-### Email: **23f1001296@ds.study.iitm.ac.in**
+# Product Documentation  
+### Contact: **23f1001296@ds.study.iitm.ac.in**
+
+Welcome to the official product documentation presentation.
 
 ---
 
-# Introduction
-Welcome to the product documentation presentation built using **Marp**.
+# Background Image Slide  
+![bg](https://images.unsplash.com/photo-1504384308090-c894fdcc538d)
 
-- Fully version-controlled
-- Convertible to PDF, PPTX, and HTML
-- Styled using custom Marp directives
-
----
-
-<!-- Slide with Background Image -->
-
-<!-- You can replace the image URL with your own hosted background image -->
-
-<!-- Use an Unsplash fallback image for now -->
-
-![bg](https://images.unsplash.com/photo-1518770660439-4636190af475)
-
-# Product Overview
-The product enables automated workflows and seamless integrations.
+## System Overview
+- Modular architecture  
+- API-driven design  
+- Scalable deployment  
 
 ---
 
-# Algorithmic Complexity
-We use efficient algorithms to ensure high performance.
+# Algorithmic Complexity (Math)
 
-Example time complexity:
+We use the time-complexity formula:
 
-$$ O(n \log n) $$
-
-Space complexity:
-
-$$ O(n) $$
+\[
+T(n) = 3n^2 + 2n + 7 \quad \Rightarrow \quad O(n^2)
+\]
 
 ---
 
-# Features
-- REST API
-- Real-time processing
-- Secure authentication
-- Modular architecture
+# Custom Styling Example
+
+This slide uses:
+- Marp custom theme  
+- Page numbers  
+- Custom CSS  
+- Mathematical equations  
+- Your email included ✔  
 
 ---
 
-# Custom Styling Directive Example
+# Final Slide
 
-```css
-section {
-  border-left: 10px solid #0a66c2;
-  padding-left: 20px;
-}
-```
+Thank you!
 
----
-
-# Conclusion
-This presentation demonstrates:
-- Email included
-- Custom theme
-- Page numbers
-- Background image
-- Math equations
-- Custom Marp styling
-
----
-
-# Thank You!
-Contact: **23f1001296@ds.study.iitm.ac.in**
