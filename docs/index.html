@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings Presentation</title>
+
+  <!-- Core RevealJS -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+
+  <!-- Code highlighting theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1 — Title -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <h3>Technical Consultant Presentation</h3>
+        <p>Email: <b>23f1001296@ds.study.iitm.ac.in</b></p>
+
+        <aside class="notes">
+          Introduce yourself and mention that this is an interactive RevealJS-based presentation hosted on GitHub Pages.
+        </aside>
+      </section>
+
+      <!-- SLIDE 2 — Markdown slide -->
+      <section data-markdown>
+        <textarea data-template>
+## **Financial Overview (Markdown Slide)**
+
+- Revenue Growth: **15%**
+- Operating Margin: **9.2%**
+- Customer Acquisition ↑ `+12%`
+
+---
+
+### Objectives
+1. Present quarterly financials  
+2. Share technology improvements  
+3. Provide insights for the next quarter  
+
+*This entire slide is written in Markdown.*
+        </textarea>
+
+        <aside class="notes">
+          This slide demonstrates Markdown support inside RevealJS.
+        </aside>
+      </section>
+
+      <!-- SLIDE 3 — Fragments -->
+      <section>
+        <h2>Key Highlights</h2>
+        <ul>
+          <li class="fragment">New AI-based fraud detection system deployed</li>
+          <li class="fragment">Reduced cloud costs by 28%</li>
+          <li class="fragment">Improved API latency by 41%</li>
+        </ul>
+
+        <aside class="notes">
+          Click to reveal each point slowly using fragments for engagement.
+        </aside>
+      </section>
+
+      <!-- SLIDE 4 — Code Highlighting -->
+      <section>
+        <h2>Backend Processing Pipeline</h2>
+
+<pre><code class="language-python">
+def calculate_net_income(revenue, expenses):
+    return revenue - expenses
+
+net = calculate_net_income(1200000, 450000)
+print("Net Income:", net)
+</code></pre>
+
+        <aside class="notes">
+          Demonstrate code highlighting using Reveal’s highlight.js plugin.
+        </aside>
+      </section>
+
+      <!-- SLIDE 5 — Math Equations -->
+      <section>
+        <h2>Financial Formula</h2>
+
+        <p>Net Present Value (NPV):</p>
+
+        $$ 
+        NPV = \sum_{t=1}^{n} \frac{R_t}{(1 + i)^t} 
+        $$
+
+        <aside class="notes">
+          RevealJS + KaTeX handles mathematical formulas cleanly.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- RevealJS Scripts (UMD builds → work with GitHub Pages) -->
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      center: true,
+      slideNumber: true,
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealMath.KaTeX,
+        RevealNotes
+      ]
+    });
+  </script>
+
+</body>
+</html>
